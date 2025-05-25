@@ -1,0 +1,30 @@
+blank_issues_enabled: false
+
+issue_templates:
+  - name: ✨ 기능 개발 이슈
+    description: 기능 구현 및 컴포넌트 개발 작업을 위한 템플릿
+    file: feat-template.md
+    labels:
+      - feature
+    assignees: []
+
+  - name: ⚡️ 버그 리포트
+    description: 발견된 버그를 상세히 보고하고 추적합니다.
+    file: bug-report.md
+    labels:
+      - bug
+    assignees: []
+
+  - name: 🖋️ 문서 수정 요청
+    description: README, 문서, 주석 등에 대한 수정 사항을 요청합니다.
+    file: docs-update.md
+    labels:
+      - documentation
+    assignees: []
+
+  - name: 🏋️ 리팩토링 요청
+    description: 코드 구조 개선이나 리팩토링 요청을 생성합니다.
+    file: refactor-request.md
+    labels:
+      - refactor
+    assignees: []
