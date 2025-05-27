@@ -17,11 +17,11 @@ export default function Header() {
   ];
 
   return (
-    <div
-      id="header-container"
-      className="mx-auto my-0 max-w-[1440px] flex flex-col items-center"
-    >
-      <header className="w-full max-w-[1120px] bg-white px-4 md:px-0 py-6 md:py-4 flex justify-between md:justify-center md:gap-8 items-center">
+    <header className="mx-auto my-0 max-w-[1440px] flex flex-col items-center">
+      <div
+        id="header-container"
+        className="w-full max-w-[1120px] bg-white px-4 md:px-0 py-6 md:py-4 flex justify-between md:justify-center md:gap-8 items-center"
+      >
         {/* 로고 */}
         <Link to="/">
           <img src={logoBlack} alt="cyber logo" className="h-7 flex-none" />
@@ -71,7 +71,7 @@ export default function Header() {
         <button className="md:hidden">
           <img src={burger} alt="burger button" className="w-10 h-10" />
         </button>
-      </header>
-    </div>
+      </div>
+    </header>
   );
 }
