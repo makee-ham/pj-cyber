@@ -19,17 +19,19 @@ export default function Header() {
   return (
     <header className="w-full max-w-[1120px] bg-white px-4 md:px-0 py-6 md:py-4 flex justify-between md:justify-center md:gap-8 items-center">
       {/* 로고 */}
-      <img src={logoBlack} alt="cyber logo" className="h-7 flex-none" />
+      <Link to="/">
+        <img src={logoBlack} alt="cyber logo" className="h-7 flex-none" />
+      </Link>
 
       {/* 검색창 */}
-      <div className="hidden md:flex flex-[4] items-center rounded-lg bg-[#f5f5f5] h-14">
+      <form className="hidden md:flex flex-[4] items-center rounded-lg bg-[#f5f5f5] h-14 pr-10">
         <img src={search} alt="search icon" className="w-6 h-6 m-4 mr-2" />
         <input
           type="text"
           placeholder="Search"
-          className="bg-transparent text-sm focus:outline-none text-[#656565]"
+          className="bg-transparent text-sm focus:outline-none text-[#656565] flex-[1]"
         />
-      </div>
+      </form>
 
       {/* 네비게이션 */}
       <nav className="hidden md:flex flex-[3] min-w-[210px] justify-between">
@@ -39,7 +41,7 @@ export default function Header() {
             to={path}
             className={
               location.pathname === path
-                ? 'opacity-100 font-semibold'
+                ? 'opacity-100'
                 : 'opacity-30 hover:opacity-100'
             }
           >
@@ -50,9 +52,15 @@ export default function Header() {
 
       {/* 아이콘 목록 */}
       <div className="hidden md:flex flex-[1] min-w-[96px] justify-between">
-        <img src={favorites} alt="favorites icon" className="w-8 h-8" />
-        <img src={cart} alt="cart icon" className="w-8 h-8" />
-        <img src={user} alt="user icon" className="w-8 h-8" />
+        <Link>
+          <img src={favorites} alt="favorites icon" className="w-8 h-8" />
+        </Link>
+        <Link>
+          <img src={cart} alt="cart icon" className="w-8 h-8" />
+        </Link>
+        <Link>
+          <img src={user} alt="user icon" className="w-8 h-8" />
+        </Link>
       </div>
 
       {/* 햄버거 메뉴 */}
