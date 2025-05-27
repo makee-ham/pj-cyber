@@ -17,10 +17,10 @@ export default function Header() {
   ];
 
   return (
-    <header className="mx-auto my-0 max-w-[1440px] flex flex-col items-center">
+    <header className="mx-auto my-0 w-full flex flex-col items-center bg-white">
       <div
         id="header-container"
-        className="w-full max-w-[1120px] bg-white px-4 md:px-0 py-6 md:py-4 flex justify-between md:justify-center md:gap-8 items-center"
+        className="w-full max-w-[1120px] px-4 md:px-0 py-6 md:py-4 flex justify-between md:justify-center md:gap-8 items-center"
       >
         {/* 로고 */}
         <Link to="/">
