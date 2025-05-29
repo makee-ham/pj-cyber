@@ -1,8 +1,8 @@
 import logoWhite from '../assets/images/logo_white.svg';
-import twitter from '../assets/images/Twitter.svg';
-import facebook from '../assets/images/Facebook.svg';
-import tiktok from '../assets/images/Tiktok.svg';
-import instagram from '../assets/images/Instagram.svg';
+import twitter from '../assets/icons/Twitter.svg';
+import facebook from '../assets/icons/Facebook.svg';
+import tiktok from '../assets/icons/Tiktok.svg';
+import instagram from '../assets/icons/Instagram.svg';
 import { Link } from 'react-router-dom';
 
 export default function Footer() {

@@ -10,51 +10,55 @@ export default function Button({
   onClick,
   disabled = false,
   children,
+  className = '',
 }) {
   // 공통 스타일
-  let className =
-    'inline-flex w-auto px-4 justify-center items-center font-medium text-center transition duration-200 focus:outline-none cursor-pointer';
+  let baseClass =
+    'inline-flex justify-center items-center font-medium text-center transition duration-200 focus:outline-none cursor-pointer';
 
   // disabled true
   if (disabled) {
-    className += ' opacity-50 cursor-not-allowed';
+    baseClass += ' opacity-50 cursor-not-allowed';
   }
 
   // filled 스타일
   if (variant === 'filled') {
-    className += ' h-12 text-[14px] rounded-[8px]';
+    baseClass += ' h-12 text-[14px] rounded-[8px]';
 
     if (color === 'black') {
-      className += ' bg-black text-white';
+      baseClass += ' bg-black text-white';
     } else if (color === 'white') {
-      className += ' bg-white text-black';
+      baseClass += ' bg-white text-black';
     } else {
-      className += ' bg-gray-300 text-black';
+      baseClass += ' bg-gray-300 text-black';
     }
 
     if (!disabled) {
-      className += ' hover:opacity-80';
+      baseClass += ' hover:opacity-80';
     }
   }
 
   // ghost 스타일
   if (variant === 'ghost') {
-    className += ' h-14 text-[16px] rounded-[6px] border bg-transparent';
+    baseClass += ' h-14 text-[16px] rounded-[6px] border bg-transparent';
 
     if (color === 'black') {
-      className += ' border-black text-black';
-      if (!disabled) className += ' hover:bg-black hover:text-white';
+      baseClass += ' border-black text-black';
+      if (!disabled) baseClass += ' hover:bg-black hover:text-white';
     } else if (color === 'white') {
-      className += ' border-white text-white';
-      if (!disabled) className += ' hover:bg-white hover:text-black';
+      baseClass += ' border-white text-white';
+      if (!disabled) baseClass += ' hover:bg-white hover:text-black';
     } else {
-      className += ' border-gray-300 text-gray-300';
-      if (!disabled) className += ' hover:bg-gray-300/10';
+      baseClass += ' border-gray-300 text-gray-300';
+      if (!disabled) baseClass += ' hover:bg-gray-300/10';
     }
   }
 
+  // baseClass + 외부 입력 받은 class
+  const combinedClass = `${baseClass} ${className}`;
+
   return (
-    <button onClick={onClick} disabled={disabled} className={className}>
+    <button onClick={onClick} disabled={disabled} className={combinedClass}>
       {children}
     </button>
   );
