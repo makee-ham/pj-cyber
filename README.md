@@ -1,4 +1,7 @@
 ![](https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExNmhwc2hnNHY1am5lN2N6ZXV5a2FneDdoOW1lOWRyeGZpczlwOGpybiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/UYDkRppir2d2M/giphy.gif)
+> "I've seen things you people wouldn't believe. Attack ships on fire off the shoulder of Orion. I watched c-beams glitter in the dark near the Tannhäuser Gate. All those moments will be lost in time, like tears in rain. Time to die." ─ Roy
+
+---
 
 # React + Vite
 
