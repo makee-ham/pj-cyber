@@ -1,3 +1,5 @@
+![](https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExNmhwc2hnNHY1am5lN2N6ZXV5a2FneDdoOW1lOWRyeGZpczlwOGpybiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/UYDkRppir2d2M/giphy.gif)
+
 # React + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
