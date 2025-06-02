@@ -1,6 +1,6 @@
 import Button from './Button';
-import iPhoneMob from '../assets/images/hero_iphone_m.png';
-import iPhonePC from '../assets/images/hero_iphone_d.png';
+import iPhoneMob from '~images/hero_iphone_m.png';
+import iPhonePC from '~images/hero_iphone_d.png';
 
 export default function HeroSection() {
   return (

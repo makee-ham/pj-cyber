@@ -28,6 +28,12 @@
             ],
             "~/*": [
                 "src/*"
+            ],
+            "~icons/*": [
+                "src/assets/icons/*"
+            ],
+            "~images/*": [
+                "src/assets/images/*"
             ]
         }
     }

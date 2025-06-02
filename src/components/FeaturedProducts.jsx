@@ -1,12 +1,12 @@
-import airpodsM from '../assets/images/airpodsmax_m.png';
-import visionM from '../assets/images/applevision_m.png';
-import psM from '../assets/images/playstation_m.png';
-import macbookM from '../assets/images/macbookpro14_m.png';
+import airpodsM from '~images/airpodsmax_m.png';
+import visionM from '~images/applevision_m.png';
+import psM from '~images/playstation_m.png';
+import macbookM from '~images/macbookpro14_m.png';
 
-import airpodsD from '../assets/images/airpodsmax_d.png';
-import visionD from '../assets/images/applevision_d.png';
-import psD from '../assets/images/playstation_d.png';
-import macbookD from '../assets/images/macbookpro14_d.png';
+import airpodsD from '~images/airpodsmax_d.png';
+import visionD from '~images/applevision_d.png';
+import psD from '~images/playstation_d.png';
+import macbookD from '~images/macbookpro14_d.png';
 
 import FeaturedProduct from './FeaturedProduct';
 import { useEffect, useState } from 'react';

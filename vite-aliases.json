@@ -8,6 +8,14 @@
     "replacement": "/Users/hamseoyeon/Desktop/ozbootcamp/advanced-class/pj-cyber/src/assets"
   },
   {
+    "find": "~icons",
+    "replacement": "/Users/hamseoyeon/Desktop/ozbootcamp/advanced-class/pj-cyber/src/assets/icons"
+  },
+  {
+    "find": "~images",
+    "replacement": "/Users/hamseoyeon/Desktop/ozbootcamp/advanced-class/pj-cyber/src/assets/images"
+  },
+  {
     "find": "~components",
     "replacement": "/Users/hamseoyeon/Desktop/ozbootcamp/advanced-class/pj-cyber/src/components"
   },

@@ -1,5 +1,5 @@
-import FeaturedProducts from '../components/FeaturedProducts';
-import HeroSection from '../components/HeroSection';
+import FeaturedProducts from '~components/FeaturedProducts';
+import HeroSection from '~components/HeroSection';
 
 export default function Home() {
   return (
