@@ -6,7 +6,7 @@ export default function HeroSection() {
   return (
     <div
       id="hero-section"
-      className="flex flex-col md:flex-row items-center justify-end md:justify-center gap-12 md:gap-0 w-full bg-[#211C24] px-4 md:px-0"
+      className="flex flex-col md:flex-row items-center justify-end md:justify-center gap-12 md:gap-0 w-full bg-[#211C24] px-4 md:px-6"
     >
       <div
         id="hero-content"
