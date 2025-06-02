@@ -17,7 +17,7 @@ export default function FeaturedProduct({
     // Button.jsx 때처럼 경우를 나누어 문자열로 class를 더해줘야 함. 아니면 tailwind-merge 쓰든가.
     // 이에 style로 분리
     <article
-      className="flex flex-col items-center gap-8 w-full px-4 py-10"
+      className="flex flex-col items-center justify-center gap-8 w-full px-4 py-10 md:h-full"
       style={{ backgroundColor: bgColor }}
     >
       <img
