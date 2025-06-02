@@ -1,9 +1,9 @@
-import logoBlack from '../assets/images/logo_black.svg';
-import burger from '../assets/icons/Burger.svg';
-import search from '../assets/icons/Search.svg';
-import favorites from '../assets/icons/Favorites.svg';
-import cart from '../assets/icons/Cart.svg';
-import user from '../assets/icons/User.svg';
+import logoBlack from '~images/logo_black.svg';
+import burger from '~icons/Burger.svg';
+import search from '~icons/Search.svg';
+import favorites from '~icons/Favorites.svg';
+import cart from '~icons/Cart.svg';
+import user from '~icons/User.svg';
 import { useLocation, Link } from 'react-router-dom';
 
 export default function Header() {

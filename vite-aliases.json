@@ -1,0 +1,42 @@
+[
+  {
+    "find": "~",
+    "replacement": "/Users/hamseoyeon/Desktop/ozbootcamp/advanced-class/pj-cyber/src"
+  },
+  {
+    "find": "~assets",
+    "replacement": "/Users/hamseoyeon/Desktop/ozbootcamp/advanced-class/pj-cyber/src/assets"
+  },
+  {
+    "find": "~icons",
+    "replacement": "/Users/hamseoyeon/Desktop/ozbootcamp/advanced-class/pj-cyber/src/assets/icons"
+  },
+  {
+    "find": "~images",
+    "replacement": "/Users/hamseoyeon/Desktop/ozbootcamp/advanced-class/pj-cyber/src/assets/images"
+  },
+  {
+    "find": "~components",
+    "replacement": "/Users/hamseoyeon/Desktop/ozbootcamp/advanced-class/pj-cyber/src/components"
+  },
+  {
+    "find": "~pages",
+    "replacement": "/Users/hamseoyeon/Desktop/ozbootcamp/advanced-class/pj-cyber/src/pages"
+  },
+  {
+    "find": "~contexts",
+    "replacement": "/Users/hamseoyeon/Desktop/ozbootcamp/advanced-class/pj-cyber/src/contexts"
+  },
+  {
+    "find": "~layouts",
+    "replacement": "/Users/hamseoyeon/Desktop/ozbootcamp/advanced-class/pj-cyber/src/layouts"
+  },
+  {
+    "find": "~router",
+    "replacement": "/Users/hamseoyeon/Desktop/ozbootcamp/advanced-class/pj-cyber/src/router"
+  },
+  {
+    "find": "~data",
+    "replacement": "/Users/hamseoyeon/Desktop/ozbootcamp/advanced-class/pj-cyber/src/data"
+  }
+]
