@@ -1,8 +1,14 @@
-import FeaturedProduct from './FeaturedProduct';
 import airpodsM from '../assets/images/airpodsmax_m.png';
 import visionM from '../assets/images/applevision_m.png';
 import psM from '../assets/images/playstation_m.png';
 import macbookM from '../assets/images/macbookpro14_m.png';
+
+import airpodsD from '../assets/images/airpodsmax_d.png';
+import visionD from '../assets/images/applevision_d.png';
+import psD from '../assets/images/playstation_d.png';
+import macbookD from '../assets/images/macbookpro14_d.png';
+
+import FeaturedProduct from './FeaturedProduct';
 import { useEffect, useState } from 'react';
 
 const MD = 768;
@@ -37,6 +43,7 @@ export default function FeaturedProducts() {
           description="Computational audio. Listen, it's powerful"
           bgColor="#EDEDED"
           mobileImg={airpodsM}
+          desktopImg={airpodsD}
         />
       </div>
 
@@ -47,6 +54,7 @@ export default function FeaturedProducts() {
           bgColor="#353535"
           textColor="white"
           mobileImg={visionM}
+          desktopImg={visionD}
         />
       </div>
 
@@ -56,6 +64,7 @@ export default function FeaturedProducts() {
           description="Incredibly powerful CPUs, GPUs, and an SSD with integrated I/O will redefine your PlayStation experience."
           bgColor="#fff"
           mobileImg={psM}
+          desktopImg={psD}
         />
       </div>
 
@@ -65,6 +74,7 @@ export default function FeaturedProducts() {
           description="The new 15‑inch MacBook Air makes room for more of what you love with a spacious Liquid Retina display."
           bgColor="#EDEDED"
           mobileImg={macbookM}
+          desktopImg={macbookD}
           hasButton={true}
           hightlightTitleIndex={0}
         />

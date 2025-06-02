@@ -6,6 +6,7 @@ export default function FeaturedProduct({
   bgColor,
   textColor = 'black',
   mobileImg,
+  desktopImg,
   hasButton = false,
   hightlightTitleIndex = -1,
 }) {
