@@ -26,10 +26,15 @@ export default function BrowseByCategory() {
         </div>
 
         <div
-          id="caregory-cards-area"
-          className="flex flex-wrap gap-4 w-full h-auto"
+          id="category-cards-visible-section"
+          className="overflow-hidden w-full h-auto min-h-32"
         >
-          {}
+          <div
+            id="caregory-cards-container"
+            className="flex flex-wrap gap-4 w-full h-full"
+          >
+            {'여기에 각 카드들'}
+          </div>
         </div>
       </div>
     </section>
