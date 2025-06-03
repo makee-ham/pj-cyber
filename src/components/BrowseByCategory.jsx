@@ -23,7 +23,7 @@ export default function BrowseByCategory() {
     setPageIndex(prev => (prev >= maxPage ? 0 : prev + 1));
 
   return (
-    <section className="flex justify-center items-center w-full py-16 px-4">
+    <section className="flex justify-center items-center w-full py-16 px-4 bg-[#FAFAFA]">
       <div
         id="category-container"
         className="flex flex-col gap-12 w-full max-w-[1120px]"
