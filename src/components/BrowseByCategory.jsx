@@ -2,16 +2,23 @@ import ArrowLeft from '~icons/ArrowLeft.svg';
 import ArrowRight from '~icons/ArrowRight.svg';
 import { categoryData, CATEGORIES_PER_PAGE } from '~data/homeCategories.js';
 import { useState } from 'react';
+import CategoryCardsContainer from './CategoryCardsContainer';
+
+// 페이지 당 최대 여섯(CATEGORIES_PER_PAGE) 카테고리씩으로 데이터 정리한 2차원 배열
+const paginatedCategories = [];
+
+for (let i = 0; i < categoryData.length; i += CATEGORIES_PER_PAGE) {
+  const page = categoryData.slice(i, i + CATEGORIES_PER_PAGE);
+  paginatedCategories.push(page);
+}
+
+const maxPage = Math.ceil(categoryData.length / CATEGORIES_PER_PAGE) - 1;
 
 export default function BrowseByCategory() {
   const [pageIndex, setPageIndex] = useState(0);
 
-  const maxPage = Math.ceil(categoryData.length / CATEGORIES_PER_PAGE) - 1;
-
   const handleGoPrev = () =>
-    setPageIndex(prev => {
-      prev <= 0 ? maxPage : prev - 1;
-    });
+    setPageIndex(prev => (prev <= 0 ? maxPage : prev - 1));
   const handleGoNext = () =>
     setPageIndex(prev => (prev >= maxPage ? 0 : prev + 1));
 
@@ -42,12 +49,9 @@ export default function BrowseByCategory() {
           id="category-cards-visible-section"
           className="overflow-hidden w-full h-auto min-h-32"
         >
-          <div
-            id="caregory-cards-container"
-            className="flex flex-wrap gap-4 w-full h-full"
-          >
-            {'여기에 각 카드들'}
-          </div>
+          <CategoryCardsContainer
+            paginatedCategoriesData={paginatedCategories[pageIndex]}
+          />
         </div>
       </div>
     </section>

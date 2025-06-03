@@ -34,6 +34,15 @@
             ],
             "~images/*": [
                 "src/assets/images/*"
+            ],
+            "~hooks/*": [
+                "src/hooks/*"
+            ],
+            "~HomeCategoryContext/*": [
+                "src/contexts/HomeCategoryContext/*"
+            ],
+            "~CategoryData/*": [
+                "src/contexts/CategoryData/*"
             ]
         }
     }
