@@ -19,7 +19,7 @@ export default function FeaturedProduct({
     // Button.jsx 때처럼 경우를 나누어 문자열로 class를 더해줘야 함. 아니면 tailwind-merge 쓰든가.
     // 이에 style로 분리
     <article
-      className={`flex flex-col ${dId === 'l' ? 'md:flex-row-reverse' : 'md:flex-row'} items-center justify-center  gap-8 w-full px-4 md:px-0 py-10 ${dId === 'l' ? 'md:py-[49px] md:gap-0 md:pl-14 md:justify-between' : 'md:justify-start md:py-0 md:pr-12 md:gap-[1vw]'} md:h-full min-h-0 overflow-hidden`}
+      className={`flex flex-col  items-center justify-center md:justify-between  gap-8 w-full px-4 md:px-0 py-10 overflow-hidden ${dId === 'l' ? 'md:flex-row-reverse md:py-[49px] md:gap-0 md:pl-14 md:h-[600px]' : 'md:flex-row md:py-0 md:pr-12 md:gap-[1vw]'} ${dId === 'm' ? 'md:h-[328px]' : 'md:h-[272px]'}`}
       style={{
         backgroundColor: bgColor,
       }}
@@ -30,7 +30,7 @@ export default function FeaturedProduct({
         className={`object-contain max-h-[200px] md:max-w-[40%] md:max-h-full `}
       />
       <div
-        className={`flex flex-col items-center md:items-start gap-4 ${dId === 'sa' || dId === 'sv' ? 'md:gap-2 md:my-16 md:ml-4 md:max-w-40' : dId === 'm' ? 'md:my-24 md:max-w-[338px]' : 'md:my-28 md:max-w-[360px]'} w-full text-balance`}
+        className={`flex flex-col items-center md:items-start gap-4 ${dId === 'sa' || dId === 'sv' ? 'md:gap-2 md:my-16 md:ml-4 md:max-w-40' : dId === 'm' ? 'md:my-24 md:max-w-[404px]' : 'md:my-28 md:max-w-[360px]'} w-full text-balance`}
         style={{ color: textColor }}
       >
         <h2
