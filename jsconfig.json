@@ -43,6 +43,9 @@
             ],
             "~CategoryData/*": [
                 "src/contexts/CategoryData/*"
+            ],
+            "~Icon/*": [
+                "src/assets/icons/Icon/*"
             ]
         }
     }
