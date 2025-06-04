@@ -1,6 +1,7 @@
 import BrowseByCategory from '~components/BrowseByCategory';
 import FeaturedProducts from '~components/FeaturedProducts';
 import HeroSection from '~components/HeroSection';
+import MainProducts from '~components/MainProducts';
 
 export default function Home() {
   return (
@@ -8,6 +9,7 @@ export default function Home() {
       <HeroSection />
       <FeaturedProducts />
       <BrowseByCategory />
+      <MainProducts />
     </div>
   );
 }
