@@ -71,7 +71,7 @@ export default function MainProductsTab() {
   return (
     <div
       ref={tabRef}
-      className="overflow-x-auto scrollbar-hide px-4 select-none cursor-grab"
+      className="overflow-x-auto scrollbar-hide px-4 select-none cursor-grab md:px-0"
       onMouseDown={e => handleStart(e.pageX)}
       onMouseMove={e => handleMove(e.pageX, e)}
       onMouseUp={e => handleEnd(e)}
@@ -81,7 +81,7 @@ export default function MainProductsTab() {
         {tabs.map((tab, idx) => (
           <li
             key={idx}
-            className={`whitespace-nowrap font-medium leading-8 text-[#8b8b8b] cursor-pointer h-full transition-colors duration-300 ${
+            className={`whitespace-nowrap font-medium leading-8 text-[#8b8b8b] cursor-pointer h-full transition-colors duration-300 md:text-[18px] ${
               selectedTab === tab
                 ? 'relative text-black after:content-[""] after:absolute after:left-0 after:bottom-0 after:h-0.5 after:w-full after:bg-black after:rounded-full'
                 : 'hover:text-[#333]'

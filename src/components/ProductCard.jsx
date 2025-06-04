@@ -10,7 +10,7 @@ export default function ProductCard() {
   const [isLiked, setIsLiked] = useState(false);
 
   return (
-    <div className="flex flex-col flex-1 items-center gap-2 w-auto h-[352px] px-3 py-6 bg-[#F6F6F6] rounded-[9px] md:gap-4 md:min-w-50 md:h-auto md:px-4">
+    <div className="flex flex-col flex-1 items-center gap-2 w-auto h-[352px] px-3 py-6 bg-[#F6F6F6] rounded-[9px] md:basis-1/5 md:gap-4 md:h-auto md:px-4">
       <div className="flex justify-end w-full h-auto">
         <svg
           xmlns="http://www.w3.org/2000/svg"
