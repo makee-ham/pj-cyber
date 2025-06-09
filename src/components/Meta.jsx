@@ -1,6 +1,12 @@
 import { Helmet } from 'react-helmet';
 
-export default function Meta({ title, description, keywords, image, url }) {
+export default function Meta({
+  title = Meta.defaultProps.title,
+  description = Meta.defaultProps.description,
+  keywords = Meta.defaultProps.keywords,
+  image = Meta.defaultProps.image,
+  url = Meta.defaultProps.url,
+}) {
   return (
     <Helmet>
       <title>{title}</title>
@@ -18,3 +24,13 @@ export default function Meta({ title, description, keywords, image, url }) {
     </Helmet>
   );
 }
+
+Meta.defaultProps = {
+  title: 'CYBER - Curated Design for the Digital Age',
+  description:
+    'Explore cutting-edge design, tech-inspired products, and curated collections for a modern digital lifestyle. CYBER brings future aesthetics into the now.',
+  keywords:
+    'cyber, modern design, digital lifestyle, curated products, tech aesthetics, independent brands',
+  image: '/og-default.png',
+  url: '#',
+};
