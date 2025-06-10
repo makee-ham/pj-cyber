@@ -1,4 +1,5 @@
 import BrowseByCategory from '~components/BrowseByCategory';
+import CarouselBannerSection from '~components/CarouselBannerSection';
 import FeaturedProducts from '~components/FeaturedProducts';
 import HeroSection from '~components/HeroSection';
 import MainProducts from '~components/MainProducts';
@@ -13,6 +14,7 @@ export default function Home() {
         <FeaturedProducts />
         <BrowseByCategory />
         <MainProducts />
+        <CarouselBannerSection />
       </div>
     </>
   );
