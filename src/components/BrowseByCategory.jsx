@@ -36,10 +36,10 @@ export default function BrowseByCategory() {
             Browse By Category
           </h3>
           <div className="flex justify-between w-20 h-8">
-            <button onClick={handleGoPrev}>
+            <button type='button' onClick={handleGoPrev}>
               <img src={ArrowLeft} alt="arrow" />
             </button>
-            <button onClick={handleGoNext}>
+            <button type='button' onClick={handleGoNext}>
               <img src={ArrowRight} alt="arrow" />
             </button>
           </div>
