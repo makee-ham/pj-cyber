@@ -1,6 +1,7 @@
 import IpadPro from '~images/IpadPro.png';
 import CarouselBanner from './CarouselBanner';
 import CarouselDots from './CarouselDots';
+import { useEffect, useState } from 'react';
 
 const sampleSlidesData = [
   {
@@ -34,6 +35,19 @@ const sampleSlidesData = [
 ];
 
 export default function CarouselBannerSection() {
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const totalSlides = sampleSlidesData.length;
+
+  useEffect(() => {
+    const autoslideTimer = setInterval(() => {
+      setCurrentIndex(prev => (prev + 1) % totalSlides);
+    }, 5000);
+
+    return () => clearInterval(autoslideTimer);
+  }, [totalSlides]);
+
+  const handleDotClick = index => setCurrentIndex(index);
+
   return (
     <section className="w-full py-14 px-8 flex flex-col item-center gap-12 overflow-hidden bg-[#F9F9F9] md:hidden">
       {/* 캐러셀 컨테이너 */}
@@ -41,12 +55,12 @@ export default function CarouselBannerSection() {
         {/* carousel wrapper 가로로 길게 감싸는 */}
         <div
           className="flex gap-8 transition-transform duration-300"
-          style={{ width: `${sampleSlidesData.length * 100}%` }}
+          style={{ width: `${totalSlides * 100}%` }}
         >
           {sampleSlidesData.map(datum => (
             <CarouselBanner
               key={datum.id}
-              count={sampleSlidesData.length}
+              count={totalSlides}
               image={datum.image}
               title={datum.title}
               description={datum.description}
@@ -56,8 +70,12 @@ export default function CarouselBannerSection() {
       </div>
       {/* Dot Indicators */}
       <ul className="flex justify-center items-center gap-[9px] h-2">
-        {sampleSlidesData.map(datum => (
-          <CarouselDots key={datum.id} />
+        {sampleSlidesData.map((datum, index) => (
+          <CarouselDots
+            key={datum.id}
+            isActive={currentIndex === index}
+            onClick={() => handleDotClick(index)}
+          />
         ))}
       </ul>
     </section>

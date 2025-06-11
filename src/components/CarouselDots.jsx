@@ -1,4 +1,4 @@
-export default function CarouselDots({ opacity }) {
+export default function CarouselDots({ isActive, onClick }) {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -6,8 +6,10 @@ export default function CarouselDots({ opacity }) {
       height="8"
       viewBox="0 0 8 8"
       fill="none"
+      onClick={onClick}
+      className="cursor-pointer"
     >
-      <circle cx="4" cy="4" r="4" fill="black" opacity={opacity} />
+      <circle cx="4" cy="4" r="4" fill="black" opacity={isActive ? 1 : 0.1} />
     </svg>
   );
 }
