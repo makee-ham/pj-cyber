@@ -68,7 +68,7 @@ export default function Header() {
         </div>
 
         {/* 햄버거 메뉴 */}
-        <button className="md:hidden">
+        <button type="button" className="md:hidden">
           <img src={burger} alt="burger button" className="w-10 h-10" />
         </button>
       </div>
