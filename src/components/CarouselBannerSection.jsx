@@ -1,7 +1,7 @@
 import IpadPro from '~images/IpadPro.png';
 import CarouselBanner from './CarouselBanner';
 import CarouselDots from './CarouselDots';
-import { useEffect, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 
 const sampleSlidesData = [
   {
@@ -38,24 +38,75 @@ export default function CarouselBannerSection() {
   const [currentIndex, setCurrentIndex] = useState(0);
   const totalSlides = sampleSlidesData.length;
 
-  useEffect(() => {
-    const autoslideTimer = setInterval(() => {
+  const timerRef = useRef(null);
+
+  const startX = useRef(0);
+  const startTime = useRef(0);
+
+  const resetAutoSlide = () => {
+    if (timerRef.current) {
+      clearInterval(timerRef.current);
+    }
+    timerRef.current = setInterval(() => {
       setCurrentIndex(prev => (prev + 1) % totalSlides);
     }, 5000);
+  };
 
-    return () => clearInterval(autoslideTimer);
-  }, [totalSlides]);
+  useEffect(() => {
+    resetAutoSlide();
+    return () => clearInterval(timerRef.current);
+  }, []);
 
-  const handleDotClick = index => setCurrentIndex(index);
+  const handleDotClick = index => {
+    setCurrentIndex(index);
+    resetAutoSlide();
+  };
+
+  const handleDragStart = e => {
+    startX.current = e.type.includes('mouse')
+      ? e.clientX
+      : e.touches[0].clientX;
+    startTime.current = new Date().getTime();
+  };
+
+  const handleDragEnd = e => {
+    const endX = e.type.includes('mouse')
+      ? e.clientX
+      : e.changedTouches[0].clientX;
+    const endTime = new Date().getTime();
+
+    const deltaX = endX - startX.current;
+    const duration = endTime - startTime.current;
+
+    if (Math.abs(deltaX) < 10 && duration < 300) return; // 드래그 여부 구분
+
+    if (deltaX > 50) {
+      setCurrentIndex(prev => (prev === 0 ? totalSlides - 1 : prev - 1));
+      resetAutoSlide();
+    } else if (deltaX < -50) {
+      setCurrentIndex(prev => (prev + 1) % totalSlides);
+      resetAutoSlide();
+    }
+  };
 
   return (
-    <section className="w-full py-14 px-8 flex flex-col item-center gap-12 overflow-hidden bg-[#F9F9F9] md:hidden">
-      {/* 캐러셀 컨테이너 */}
+    <section
+      className="w-full py-14 px-8 flex flex-col items-center gap-12 overflow-hidden select-none bg-[#F9F9F9] md:hidden"
+      onDragStart={e => e.preventDefault()}
+    >
+      {/* Carousel Container */}
       <div className="w-full overflow-hidden">
-        {/* carousel wrapper 가로로 길게 감싸는 */}
+        {/* Carousel Slide Wrapper */}
         <div
-          className="flex gap-8 transition-transform duration-300"
-          style={{ width: `${totalSlides * 100}%` }}
+          className="flex transition-transform duration-300"
+          style={{
+            width: `${totalSlides * 100}%`,
+            transform: `translateX(-${currentIndex * (100 / totalSlides)}%)`,
+          }}
+          onMouseDown={handleDragStart}
+          onMouseUp={handleDragEnd}
+          onTouchStart={handleDragStart}
+          onTouchEnd={handleDragEnd}
         >
           {sampleSlidesData.map(datum => (
             <CarouselBanner
@@ -68,6 +119,7 @@ export default function CarouselBannerSection() {
           ))}
         </div>
       </div>
+
       {/* Dot Indicators */}
       <ul className="flex justify-center items-center gap-[9px] h-2">
         {sampleSlidesData.map((datum, index) => (
