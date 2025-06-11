@@ -11,6 +11,8 @@ import macbookD from '~images/macbookpro14_d.png';
 import FeaturedProduct from './FeaturedProduct';
 import { useEffect, useState } from 'react';
 
+import { throttle } from 'lodash';
+
 const MD = 768;
 
 export default function FeaturedProducts() {
@@ -18,11 +20,16 @@ export default function FeaturedProducts() {
 
   // window innderWidth 변경 시 데스크톱 여부(화면 너비) 상태 업데이트
   useEffect(() => {
-    const handleResize = () => {
+    const throttledResizeHandler = throttle(() => {
       setIsDesktop(window.innerWidth >= MD);
+    }, 300);
+
+    window.addEventListener('resize', throttledResizeHandler);
+
+    return () => {
+      window.removeEventListener('resize', throttledResizeHandler);
+      throttledResizeHandler.cancel();
     };
-    window.addEventListener('resize', handleResize);
-    return () => window.removeEventListener('resize', handleResize);
   }, []);
 
   return (
