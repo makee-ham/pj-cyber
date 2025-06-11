@@ -58,7 +58,12 @@ export default function Button({
   const combinedClass = `${baseClass} ${className}`;
 
   return (
-    <button onClick={onClick} disabled={disabled} className={combinedClass}>
+    <button
+      type="button"
+      onClick={onClick}
+      disabled={disabled}
+      className={combinedClass}
+    >
       {children}
     </button>
   );
